@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Link } from 'expo-router';
 
-function SavedPage() {
+function MarketplacePage() {
   return (
     <View
       style={{
@@ -13,7 +13,7 @@ function SavedPage() {
         gap: 4,
       }}
     >
-      <Text>Saved Content page</Text>
+      <Text>Profile Page</Text>
       <Link href='/log-in' style={{ textDecorationLine: 'underline' }}>
         Login
       </Link>
@@ -21,10 +21,10 @@ function SavedPage() {
         Sign up
       </Link>
       <Link href='/' style={{ textDecorationLine: 'underline' }}>
-        Onboarding Page
+        Onboarding Pages
       </Link>
     </View>
   );
 }
 
-export default SavedPage;
+export default MarketplacePage;

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Link } from 'expo-router';
 
-function ProfilePage() {
+function GroupsPage() {
   return (
     <View
       style={{
@@ -13,7 +13,7 @@ function ProfilePage() {
         gap: 4,
       }}
     >
-      <Text>Profile Page</Text>
+      <Text>Saved Content page</Text>
       <Link href='/log-in' style={{ textDecorationLine: 'underline' }}>
         Login
       </Link>
@@ -21,10 +21,10 @@ function ProfilePage() {
         Sign up
       </Link>
       <Link href='/' style={{ textDecorationLine: 'underline' }}>
-        Onboarding Pages
+        Onboarding Page
       </Link>
     </View>
   );
 }
 
-export default ProfilePage;
+export default GroupsPage;

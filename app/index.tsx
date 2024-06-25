@@ -51,7 +51,7 @@ function OnboardingPage() {
             flex: 1,
             height: '100%',
             alignItems: 'center',
-            marginTop: -300,
+            marginTop: -310,
             // display: 'none',
           }}
         >
@@ -72,7 +72,7 @@ function OnboardingPage() {
           }}
         >
           <Text style={styles.boldOnboardingText}>
-            <Text>Discover endless possibilities with</Text>
+            <Text>Discover endless {'\n'} possibilities with</Text>
             <Text style={{ color: text_variant_3 }}> Aora</Text>
           </Text>
         </View>
@@ -91,8 +91,7 @@ function OnboardingPage() {
             // accessibilityLabel={`${name} pokemon`}
           />
         </View>
-        <View></View>
-        <View style={{ marginTop: -155 }}>
+        <View style={{ marginTop: -160 }}>
           <Text
             style={{
               fontFamily: 'Nunito_400Regular',
@@ -155,7 +154,7 @@ const styles = StyleSheet.create({
   },
 
   safePadding: {
-    paddingTop: Platform.OS === 'android' ? 60 : 0,
+    paddingTop: Platform.OS === 'android' ? 50 : 0,
     flex: 1,
   },
 });

@@ -25,8 +25,8 @@ const logo = require('../../assets/images/aora-logo.png');
 
 function StartSignUpPage() {
   const [startSignUpForm, setStartSignUpForm] = useState({
+    fullName: '',
     email: '',
-    password: '',
   });
 
   const handleStartSignUp = async (e: any) => {
@@ -75,6 +75,33 @@ function StartSignUpPage() {
         <View
           style={{ width: '100%', display: 'flex', gap: 10, marginTop: 30 }}
         >
+          <Text style={styles.normalText_Light}>Full Name</Text>
+          {/* prefill with user full-name sent as input entry for the email verification process.  */}
+          <TextInput
+            placeholder='enter your full name'
+            style={{
+              width: '100%',
+              paddingHorizontal: 15,
+              paddingVertical: 12,
+              backgroundColor: `${background_variant_3}`,
+              borderRadius: 7,
+              color: `${text_variant_1}`,
+              fontSize: 14,
+              fontFamily: 'Nunito_400Regular',
+            }}
+            placeholderTextColor={text_variant_1} // Set the placeholder color here
+            value={startSignUpForm.fullName}
+            onChangeText={(text) => {
+              setStartSignUpForm({
+                ...startSignUpForm,
+                fullName: text,
+              });
+            }}
+          />
+        </View>
+        <View
+          style={{ width: '100%', display: 'flex', gap: 10, marginTop: 30 }}
+        >
           <Text style={styles.normalText_Light}>Email</Text>
           <TextInput
             placeholder='enter your email'
@@ -96,35 +123,6 @@ function StartSignUpPage() {
               setStartSignUpForm({
                 ...startSignUpForm,
                 email: text,
-              });
-            }}
-          />
-        </View>
-        <View
-          style={{ width: '100%', display: 'flex', gap: 10, marginTop: 30 }}
-        >
-          <Text style={styles.normalText_Light}>Password</Text>
-          <TextInput
-            placeholder='enter your password'
-            style={{
-              width: '100%',
-              paddingHorizontal: 15,
-              paddingVertical: 12,
-              backgroundColor: `${background_variant_3}`,
-              borderRadius: 7,
-              color: `${text_variant_1}`,
-              fontSize: 14,
-              fontFamily: 'Nunito_400Regular',
-            }}
-            placeholderTextColor={text_variant_1} // Set the placeholder color here
-            secureTextEntry
-            value={startSignUpForm.password}
-            onChangeText={(text) => {
-              // console.log('password input in progress...');
-
-              setStartSignUpForm({
-                ...startSignUpForm,
-                password: text,
               });
             }}
           />
@@ -173,6 +171,16 @@ function StartSignUpPage() {
           </Text>
           <Link
             href='/log-in'
+            style={{
+              color: `${text_variant_3}`,
+              // textDecorationLine: 'underline',
+              fontFamily: 'Nunito_600SemiBold',
+            }}
+          >
+            Log-in
+          </Link>
+          <Link
+            href='/home'
             style={{
               color: `${text_variant_3}`,
               // textDecorationLine: 'underline',

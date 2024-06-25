@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Link } from 'expo-router';
 
-function CreatePage() {
+function BookmarksPage() {
   return (
     <View
       style={{
@@ -13,7 +13,7 @@ function CreatePage() {
         gap: 4,
       }}
     >
-      <Text>Create Content page</Text>
+      <Text>Saved Content page</Text>
       <Link href='/log-in' style={{ textDecorationLine: 'underline' }}>
         Login
       </Link>
@@ -27,4 +27,4 @@ function CreatePage() {
   );
 }
 
-export default CreatePage;
+export default BookmarksPage;

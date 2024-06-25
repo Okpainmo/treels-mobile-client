@@ -33,7 +33,7 @@ const mockPostImage1 = require('../../assets/images/img-9.jpg');
 const mockPostImage2 = require('../../assets/images/img-7.png');
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-function Home() {
+function UpdatesPage() {
   const [loginForm, setLoginForm] = useState({
     email: '',
     password: '',
@@ -121,14 +121,8 @@ function Home() {
             }}
           >
             <Link href='/search'>
-              Search
-              {/* <Ionicons name='search' size={25} color={text_variant_3} /> */}
+              <Ionicons name='search' size={25} color={text_variant_3} />
             </Link>
-            <Link href='/log-in'>
-              Search
-              {/* <Ionicons name='search' size={25} color={text_variant_3} /> */}
-            </Link>
-
             <View style={{ position: 'relative' }}>
               <View
                 style={{
@@ -159,121 +153,18 @@ function Home() {
             </View>
           </View>
         </View>
-        <ScrollView
-          scrollEnabled={true}
-          horizontal={true}
-          style={{
-            marginTop: 15,
-            minWidth: '100%',
-            overflow: 'scroll',
-          }}
-        >
-          <Image
+        <View style={{ marginTop: 30 }}>
+          <Text
             style={{
-              marginHorizontal: 10,
-              width: 80,
-              objectFit: 'contain',
-              height: 80,
-              borderRadius: 50,
-              borderWidth: 2,
-              borderColor: `${border_variant_1}`,
+              fontSize: 25,
+              fontFamily: `Nunito_700Bold`,
+              color: `${text_variant_1}`,
+              paddingHorizontal: 12,
             }}
-            source={mockAvatar1}
-            // resizeMethod='scale'
-
-            // accessibilityLabel={`${name} pokemon`}
-          />
-          <Image
-            style={{
-              marginHorizontal: 10,
-              width: 80,
-              objectFit: 'contain',
-              height: 80,
-              borderRadius: 50,
-              borderWidth: 2,
-              borderColor: `${border_variant_1}`,
-            }}
-            source={mockAvatar2}
-            // resizeMethod='scale'
-
-            // accessibilityLabel={`${name} pokemon`}
-          />
-          <Image
-            style={{
-              marginHorizontal: 10,
-              width: 80,
-              objectFit: 'contain',
-              height: 80,
-              borderRadius: 50,
-              borderWidth: 2,
-              borderColor: `${border_variant_1}`,
-            }}
-            source={mockAvatar3}
-            // resizeMethod='scale'
-
-            // accessibilityLabel={`${name} pokemon`}
-          />
-          <Image
-            style={{
-              marginHorizontal: 10,
-              width: 80,
-              objectFit: 'contain',
-              height: 80,
-              borderRadius: 50,
-              borderWidth: 2,
-              borderColor: `${border_variant_1}`,
-            }}
-            source={mockAvatar4}
-            // resizeMethod='scale'
-
-            // accessibilityLabel={`${name} pokemon`}
-          />
-          <Image
-            style={{
-              marginHorizontal: 10,
-              width: 80,
-              objectFit: 'contain',
-              height: 80,
-              borderRadius: 50,
-              borderWidth: 2,
-              borderColor: `${border_variant_1}`,
-            }}
-            source={mockAvatar3}
-            // resizeMethod='scale'
-
-            // accessibilityLabel={`${name} pokemon`}
-          />
-          <Image
-            style={{
-              marginHorizontal: 10,
-              width: 80,
-              objectFit: 'contain',
-              height: 80,
-              borderRadius: 50,
-              borderWidth: 2,
-              borderColor: `${border_variant_1}`,
-            }}
-            source={mockAvatar2}
-            // resizeMethod='scale'
-
-            // accessibilityLabel={`${name} pokemon`}
-          />
-          <Image
-            style={{
-              marginHorizontal: 10,
-              width: 80,
-              objectFit: 'contain',
-              height: 80,
-              borderRadius: 50,
-              borderWidth: 2,
-              borderColor: `${border_variant_1}`,
-            }}
-            source={mockAvatar1}
-            // resizeMethod='scale'
-
-            // accessibilityLabel={`${name} pokemon`}
-          />
-        </ScrollView>
+          >
+            Latest Updates.
+          </Text>
+        </View>
         <View style={{ display: 'flex' }}>
           <View
             style={{
@@ -764,7 +655,7 @@ function Home() {
   );
 }
 
-export default Home;
+export default UpdatesPage;
 
 const styles = StyleSheet.create({
   safeAreaWrapper: {

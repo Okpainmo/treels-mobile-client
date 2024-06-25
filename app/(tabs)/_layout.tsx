@@ -72,36 +72,49 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name='create'
+        name='updates'
         options={{
-          title: 'Create',
+          title: 'Updates',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcons
-              name={focused ? 'add-circle' : 'add-circle-outline'}
+              name={focused ? 'newspaper' : 'newspaper-outline'}
               color={color}
             />
           ),
         }}
       />
       <Tabs.Screen
-        name='profile'
+        name='marketplace'
         options={{
-          title: 'Profile',
+          title: 'Marketplace',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcons
-              name={focused ? 'person' : 'person-outline'}
+              name={focused ? 'storefront' : 'storefront-outline'}
               color={color}
             />
           ),
         }}
       />
+
       <Tabs.Screen
-        name='saved'
+        name='bookmarks'
         options={{
-          title: 'Saved',
+          title: 'Bookmarks',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcons
               name={focused ? 'bookmark' : 'bookmark-outline'}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name='groups'
+        options={{
+          title: 'Groups',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcons
+              name={focused ? 'people' : 'people-outline'}
               color={color}
             />
           ),
