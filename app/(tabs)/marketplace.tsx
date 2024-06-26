@@ -23,6 +23,9 @@ function MarketplacePage() {
       <Link href='/' style={{ textDecorationLine: 'underline' }}>
         Onboarding Pages
       </Link>
+      <Link href='/search' style={{ textDecorationLine: 'underline' }}>
+        Search Pages
+      </Link>
     </View>
   );
 }

@@ -51,6 +51,24 @@ function UpdatesPage() {
         backgroundColor={background_variant_1}
         barStyle={'light-content'}
       />
+      <View style={{ position: 'absolute', bottom: 20, right: 20, zIndex: 40 }}>
+        <Link href='/add-chat'>
+          <View
+            // href='/start-chat'
+            style={{
+              backgroundColor: `${background_variant_2}`,
+              width: 55,
+              height: 55,
+              borderRadius: 50,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Ionicons name='add' size={30} color={text_variant_2} />
+          </View>
+        </Link>
+      </View>
       <ScrollView style={[styles.safePadding]}>
         <View
           style={{
@@ -121,36 +139,38 @@ function UpdatesPage() {
             }}
           >
             <Link href='/search'>
-              <Ionicons name='search' size={25} color={text_variant_3} />
+              <Ionicons name='search' size={25} color={text_variant_1} />
             </Link>
-            <View style={{ position: 'relative' }}>
-              <View
-                style={{
-                  backgroundColor: `${background_variant_4}`,
-                  position: 'absolute',
-                  zIndex: 20,
-                  width: 25,
-                  height: 25,
-                  borderRadius: 50,
-                  top: -7,
-                  left: -10,
-                }}
-              >
-                <Text
+            <Link href='/chat'>
+              <View style={{ position: 'relative' }}>
+                <View
                   style={{
-                    color: `${text_variant_2}`,
-                    // zIndex: 10,
-                    fontSize: 12,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                    marginTop: 3,
+                    backgroundColor: `${background_variant_2}`,
+                    position: 'absolute',
+                    zIndex: 20,
+                    width: 25,
+                    height: 25,
+                    borderRadius: 50,
+                    top: -7,
+                    left: -10,
                   }}
                 >
-                  90+
-                </Text>
+                  <Text
+                    style={{
+                      color: `${text_variant_2}`,
+                      // zIndex: 10,
+                      fontSize: 12,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                      marginTop: 3,
+                    }}
+                  >
+                    90+
+                  </Text>
+                </View>
+                <Ionicons name='chatbubble' size={32} color={text_variant_1} />
               </View>
-              <Ionicons name='chatbubble' size={32} color={text_variant_3} />
-            </View>
+            </Link>
           </View>
         </View>
         <View style={{ marginTop: 30 }}>
@@ -690,5 +710,7 @@ const styles = StyleSheet.create({
   safePadding: {
     paddingTop: Platform.OS === 'android' ? 50 : 0,
     flex: 1,
+    position: 'relative',
+    zIndex: 30,
   },
 });
