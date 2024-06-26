@@ -162,7 +162,7 @@ function StartSignUpPage() {
             style={{
               // width: '100%',
               color: `${text_variant_1}`,
-              marginTop: 10,
+              // marginTop: 10,
               textAlign: 'center',
               cursor: 'pointer',
             }}

@@ -59,7 +59,7 @@ function LoginInPage() {
           <Image
             style={{ width: 100, objectFit: 'contain' }}
             source={logo}
-            // resizeMethod='scale'
+            resizeMode='cover'
 
             // accessibilityLabel={`${name} pokemon`}
           />
@@ -179,7 +179,7 @@ function LoginInPage() {
             style={{
               // width: '100%',
               color: `${text_variant_1}`,
-              marginTop: 10,
+              // marginTop: 10,
               textAlign: 'center',
             }}
           >
